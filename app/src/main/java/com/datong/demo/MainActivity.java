@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("native-lib");   // 加载生成的 .so 库
     }
 
     @Override
@@ -26,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
+    // .so 中的函数
     public native String stringFromJNI();
 }
